@@ -1,0 +1,24 @@
+<!-- <ion-grid id="numbers">
+  <ion-row style="width: max-content;">
+    <ion-col *ngFor="let in of number_array;let i = index" style="min-width: 28px;text-align: center;"
+    [ngClass]="{'odd': i%2==0  }">
+        <span>{{i+1}}</span>
+    </ion-col>
+  </ion-row>
+</ion-grid> -->
+<ion-grid id="rows">
+  <ion-row style="width: max-content;">
+    <ion-col  *ngFor="let col of tableService.tableData;let i = index" style="text-align: center;">
+      <span [ngClass]="{'odd': i%2==0  }">{{i+1}}</span>
+      <h2 #anchor *ngFor="let item of col;let j=index" (click)="changeColor(item,j,i)" 
+      [ngClass]="{
+        'head':(item==p && p_c=='blue')||(item==b && b_c=='blue'),
+        'tail':(item==p && p_c=='red'||(item==b && b_c=='red')), 
+        'color1':(item==p && p_c=='yellow')||(item==b && b_c=='yellow'),
+        'color2':(item==p && p_c=='green')||(item==b && b_c=='green'),
+        'color3':(item==p && p_c=='orange')||(item==b && b_c=='orange'),
+        'first-mem': j==0}"
+      >{{item}}</h2>
+    </ion-col>
+  </ion-row>
+</ion-grid>

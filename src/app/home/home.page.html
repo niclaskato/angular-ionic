@@ -1,0 +1,27 @@
+<ion-content [fullscreen]="true">
+  <app-stats></app-stats>
+  <app-table></app-table>
+  <app-total-and-difference [presentation]="presentation"></app-total-and-difference>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <div class="footer-btns">
+    <div class="addition-btns">
+      <ion-button (click)="addHeadOrTail(p)"
+      [ngClass]="{'yellow':p_c=='yellow','blue':p_c=='blue', 'red': p_c=='red', 'orange':p_c=='orange','green':p_c=='green'}" class="addition-btns-btn">
+        {{p}}
+      </ion-button>
+      <ion-button (click)="addHeadOrTail(b)" 
+      [ngClass]="{'yellow':b_c=='yellow', 'blue': b_c=='blue', 'red': b_c=='red','orange':b_c=='orange','green':b_c=='green'}" class="addition-btns-btn">
+        {{b}}
+      </ion-button>
+    </div>
+    <div class="control-btns">
+      <ion-button (click)="deleteLastInput()" class="control-btns-btn">
+        <ion-icon slot="start" name="arrow-undo-outline"  class="control-btns-btn-icon"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
+</ion-footer>
+
+

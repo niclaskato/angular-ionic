@@ -1,0 +1,53 @@
+<ion-content>
+  <ion-title style="margin: 5%;font-size: xx-large;">settings</ion-title>
+  <ion-row (click)="changeBtn1_c()">
+    <ion-col>
+      <h2 [ngClass]="{'yellow':p_c=='yellow','blue':p_c=='blue', 'red': p_c=='red', 'orange':p_c=='orange','green':p_c=='green'}">{{p}}</h2>
+    </ion-col>
+    <h3>Button 1 color</h3>
+  </ion-row>
+  <ion-row *ngIf="btn1_c_flag" style="width: 100%;">
+<ion-input type="text" placeholder="choose a color (orange-red-green-yellow-blue)" [(ngModel)]="btn1_c" ></ion-input>
+  </ion-row>
+  <ion-row (click)="changeBtn2_c()">
+    <ion-col>
+      <h2 [ngClass]="{'yellow':b_c=='yellow','blue':b_c=='blue', 'red': b_c=='red', 'orange':b_c=='orange','green':b_c=='green'}">{{b}}</h2>
+    </ion-col>
+    <h3>Button 2 color</h3>
+  </ion-row>
+  <ion-row *ngIf="btn2_c_flag" style="width: 100%;">
+    <ion-input type="text" placeholder="choose a color (orange-red-green-yellow-blue)" [(ngModel)]="btn2_c" ></ion-input>
+      </ion-row>
+<br>
+<br>
+
+  <ion-row (click)="changeBtn1_l()" >
+    <ion-col>
+      <h2 [ngClass]="{'yellow':p_c=='yellow','blue':p_c=='blue', 'red': p_c=='red', 'orange':p_c=='orange','green':p_c=='green'}">{{p}}</h2>
+    </ion-col>
+    <h3>Button 1 letter</h3>
+  </ion-row>
+  <ion-row *ngIf="btn1_l_flag" style="width: 100%;">
+    <ion-input type="text" placeholder="enter a letter"  [(ngModel)]="btn1_l" ></ion-input>
+      </ion-row>
+  <ion-row (click)="changeBtn2_l()">
+    <ion-col>
+      <h2 [ngClass]="{'yellow':b_c=='yellow','blue':b_c=='blue', 'red': b_c=='red', 'orange':b_c=='orange','green':b_c=='green'}">{{b}}</h2>
+    </ion-col>
+    <h3>Button 2 letter</h3>
+  </ion-row>
+  <ion-row *ngIf="btn2_l_flag" style="width: 100%;">
+    <ion-input type="text" placeholder="enter a letter" [(ngModel)]="btn2_l" ></ion-input>
+      </ion-row>
+      <br>
+      <ion-row style="width: 100%;">
+        <div style="width: 100%;
+        text-align: center;">
+          <ion-button (click)="save()">save</ion-button>
+          <ion-button color="medium" (click)="close()">close</ion-button>
+  
+        </div>
+
+      </ion-row>
+
+</ion-content>

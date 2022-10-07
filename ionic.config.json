@@ -1,0 +1,8 @@
+{
+  "name": "coin-flip-tracker",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
